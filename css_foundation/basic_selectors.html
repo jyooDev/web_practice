@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Basic Selector</title>
+    <style>
+        * {
+            margin: 0;
+            background-color: aliceblue;
+        }
+        div{
+            padding: 2rem;
+            border: 5px solid darkblue;
+            width: 100px;
+            height: 50px;
+        }
+
+        /* Width and height does not include padding and border */
+        #content-box{
+            box-sizing: content-box;
+        }
+
+        /* Width and height is calculated with padding and border */
+        #border-box{
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div id="content-box">
+        <p>hello</p>    
+    </div>
+    <br/>
+    <div id="border-box">
+        <p>hello</p>
+    </div>
+</body>
+</html>
