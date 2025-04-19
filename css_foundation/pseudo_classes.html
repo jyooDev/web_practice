@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Pseudo Classes</title>
+    <style>
+        button:hover{
+            background-color:green;
+            transition: ease-in-out 0.3s;
+        }
+        
+        input:focus{
+            border: 2px solid green;
+            transition: ease-in-out 0.3s;
+        }
+
+        li:nth-child(odd){
+            background-color: yellow;
+        }
+        li:nth-child(even){
+            background-color: lightgoldenrodyellow;
+        }
+
+        .quote::before{
+            content: '"'; /* opening quote */
+            font-size: 20px;    
+        }
+
+        .quote::after{
+            content: '"'; /* closing quote */
+            font-size:20px;      
+        }
+    </style>
+</head>
+<body>
+    <button>hover me</button>
+    <input type="text" placeholder="Enter your name">
+
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+    </ul>
+
+    <hr/>
+    <p class="quote">this is a quote.</p>
+</body>
+</html>
