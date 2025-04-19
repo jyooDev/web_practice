@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Combinators</title>
+    <style>
+        /* for all child p */
+        div p{
+            color:rgb(0, 136, 255)
+        } 
+        /* only for direct child p */
+        div > p{
+            background-color: aliceblue;
+        }
+        
+        /* Adjacent sibling selector: targets only the adjacent matching sibling after an element  */
+        section + p{
+            background-color:antiquewhite;
+            color:rgb(255, 181, 84);
+            font-weight: bold;
+        } 
+
+        /* General sibling selector : targets all matching siblings after an element */
+        h3 ~ p{
+
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>This p tag is inside the div</p>
+    </div>
+    <p>This p tag is outside the div</p>
+    <div>
+        <p>Direct Child</p>
+        <section>
+            <p>Not a direct child</p>
+        </section>
+        <p>This is selected by < section > + < p ></p>
+        <p>This is NOT selected by < section > + < p ></p>
+        <hr/>
+        <h3>< h3 >heading< /h3 ></h3>
+        <p>This is selected by < h3 > ~ < p >.</p>
+        <p>This is selected by < h3 > ~ < p >.</p>
+        <p>This is selected by < h3 > ~ < p >.</p>
+    </div>
+</body>
+</html>
