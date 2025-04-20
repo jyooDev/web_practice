@@ -1,0 +1,38 @@
+<!-- 
+ Type selector: can be used for multiple elements-->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+     <title>Type & Attribute Selector</title>
+     <style>
+         #login-form{
+            padding: 1rem 3rem 3rem 3rem;
+            box-sizing: border-box;
+            width: fit-content;
+            background-color: rgb(0, 0, 84);
+            color: white;
+            border-radius: 10px;
+            text-align: center;
+         }
+         input[type='text']{
+            border: 2px solid rgb(60, 182, 226);
+         }
+     </style>
+ </head>
+ <body>
+     <form id="login-form">
+        <h3>Login</h3>
+        <div>
+            <label for="login-id">Id</label>
+            <input id="login-id" type="text" placeholder="Enter your id">
+        </div>
+        <div>
+            <label for="login-password">Password</label>
+            <input id='login-password' type="password" placeholder="Enter your oassword">
+        </div>
+        <button>Login</button>
+     </form>
+ </body>
+ </html>
