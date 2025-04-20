@@ -1,0 +1,50 @@
+body{
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.pricing{
+    display: flex;
+    gap: 20px;
+    
+}
+
+.card{
+    flex: 1;
+    /* background-color:lightblue; */
+    background-image: linear-gradient(to bottom right, rgb(116, 199, 226), rgb(24, 121, 154));
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.2);
+    padding: 20px;
+    width: 25vw;
+    box-sizing: border-box;
+}
+
+
+@media only screen and (max-width: 500px) {
+    .pricing{
+        flex-direction: column;
+    }
+    
+    .card{
+        width: 80vw;
+    }
+}
+
+.card:nth-child(1)::before{
+    content: "$3.99 \a";
+    white-space: pre;
+}
+.card:nth-child(2)::before{
+    content: "$5.99 \a";
+    white-space: pre;
+}
+.card:nth-child(3)::before{
+    content: "$7.99 \a";
+    white-space: pre;
+}
