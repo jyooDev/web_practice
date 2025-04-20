@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Font Styling</title>
+    <style>
+        /* em - Relative to parent element 1em - 100% */
+        /* rem - Relative to the root (html) -> usuall 16px is default font size */
+        /* vw, vh -> relative to viewport width and height */
+        .serif{
+            font-family: "Times New Roman", serif;
+        }
+        .sans-serif{
+            font-family: Arial, sans-serif;
+        }
+        .monospace{
+            font-family: "Courier New", monospace;
+        }
+
+        .small{
+            font-size: 12px;
+        }
+        .medium{
+            font-size: 18px;
+        }
+        .large{
+            font-size: 24px;
+        }
+
+        .two_rem{
+            font-size: 2rem;
+        }
+
+        .three_rem{
+            font-size: 3rem;
+        }
+
+        .five_vw{
+            font-size: 5vw;
+        }
+
+        .light{
+            font-weight: 100;
+        }
+        .normal{
+            font-weight: 400;
+        }
+        .bold{
+            font-weight: 700;
+        }
+
+        .italic{
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <p class="serif small light">this is small light serif font</p>
+    <p class="serif medium normal ">this is medium normal serif font</p>
+    <p class="serif large bold">this is large bold serif font</p>
+    <p class="sans-serif">this is default sans-serif font</p>
+    <p class="sans-serif two_rem">this is 2rem sans-serif font</p>
+    <p class="sans-serifthree_rem">this is 3rem sans-serif font</p>
+    <p class="monospace italic">this is default-size italic monospace font</p>
+    <p class="monospace five_vw">this is 5vw monospace font</p>
+</body>
+</html>
