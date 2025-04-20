@@ -1,0 +1,76 @@
+<!-- POSITION
+ 1. static(default) | normal flow, no positioning
+ 2. relative | moves relative to its normal position
+ 3. absolute | moves relative to the nearest positioned ancestor
+ 4. fixed | stays fixed on the screen
+ 5. sticky | sticks when scrolling past a point
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Positioning</title>
+    <style>
+        .static{
+            position: static;
+            background-color: aliceblue;
+        }
+        
+        .inline{
+            display: inline;
+            color:blue;
+        }
+        .relative{
+            position: relative;
+            background-color: beige;
+        }
+        .absolute{
+            position: absolute;
+            background-color:ghostwhite;
+        }
+        
+        .parent{
+            background-color:lightgrey;
+            width: 300px;
+            height: 1000px;
+            left: 20px;
+            top: 50px;
+        }
+
+        .absolute-div{
+            position: absolute;
+            top: 20px;
+            left: 50px;
+            background-color: lightcoral;
+        }
+
+        .fixed{
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: yellow;
+        }
+
+        .sticky{
+            z-index: 10000;
+            position: sticky;
+            top: 0;
+            background-color: lightgreen;
+            padding: 10px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="sticky">sticky</div>
+    <p class="static">static</p>
+    <p class="static inline">static inline</p>
+    <p class="absolute">absolute p</p>
+    <div class="fixed">fixed</div>
+    <div class="parent relative">
+        <div class="absolute-div">I am absolute</div>
+    </div>
+</body>
+</html>

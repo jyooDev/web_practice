@@ -1,0 +1,43 @@
+<!-- display:
+ 1. inline - adjacent elements are placed next to each other
+ 2. block - adjacent elements are placed vertically
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Layout</title>
+    <style>
+        /* .block{
+            background-color: lightblue;
+            padding: 10px;
+        }
+        .inline{
+            background-color: lightgreen;
+            padding: 5px;
+        } */
+
+        span {
+            display: block;
+            width: 200px;
+        }
+
+        div {
+            display: inline;
+        }
+
+        .hidden{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="block"> block element</div>
+    <div class="block"> block element</div>
+    <div class="hidden"> dis actinv like a span</div>
+    <span class="inline">Inline</span>
+    <span class="inline">Inline2</span>
+</body>
+</html>
