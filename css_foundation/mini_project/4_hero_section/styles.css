@@ -1,0 +1,50 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.hero{
+    background-image: url('https://codetheweb.blog/assets/img/posts/css-advanced-background-images/cover.jpg');
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+
+}
+.hero h1{
+    font-size: 40px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    color: rgba(255,255,255,0.8);
+    text-align: center;
+    margin: 0 auto;
+}
+
+.hero p{
+    width: fit-content;
+    margin: 0 auto;
+    text-align: left;
+    padding: 0 30px;
+}
+
+.highlight{
+    background: linear-gradient(to right, #d7a6a6, #866fe5c2);
+    background-clip: text;
+    text-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+    color: transparent;
+    font-style: italic; 
+}
+
+.line{
+    background-color: rgba(0, 0, 0, 0.478);
+    display:flex;
+    width: 85vw;
+    height: 2px;
+    margin: 10px auto;
+}
