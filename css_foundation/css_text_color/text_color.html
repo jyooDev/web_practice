@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text color</title>
+    <style>
+        /* Text Color */
+        .red {
+            color: red;
+        }
+
+        .custom{
+            color: #ff33eb;
+        }
+
+        .custom2{
+            color: rgba(3, 141, 200, 0.5);
+        }
+
+        /* Background Image */
+        .bg-image{
+            background-image: url("https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?cs=srgb&dl=pexels-pixabay-531880.jpg&fm=jpg");
+            box-sizing: border-box;
+            height: 200px;
+            width: fit-content;
+            padding: 20px;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+            margin: auto;
+            background-size: cover; 
+            background-position: center;
+            text-align: center;
+            align-content: center;
+            font-size: 3rem;
+            font-weight: 800;
+            color: rgba(255, 255, 255, 0.4);
+            border-radius: 0.7rem;
+        }
+
+        .bg-contain{
+            background-size: contain; /*background repeats to cover the box*/
+        }
+
+        .bg-no-repeat{
+            background-repeat: no-repeat;
+        }
+        .bg-repeat{
+            background-repeat: repeat;
+        }
+
+        .bg-fixed{
+            background-attachment: fixed;
+        }
+
+        .gradient{
+            background: linear-gradient(to right, white, green);
+        }
+
+        .radial-gradient{
+            background: radial-gradient(circle, red, blue);
+            width: 300px;
+            height: 300px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Text Color -->
+    <p class="red">red text</p>
+    <p class="custom">custom text</p>
+    <p class="custom2">custom text</p>
+
+    <div class="bg-image" >Background Image</div>
+    <br/>
+    <div class="gradient">linear gradient</div>
+    <br/>
+    <div class="radial-gradient">radial gradient</div>
+</html>
