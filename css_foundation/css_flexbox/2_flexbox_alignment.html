@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Flexbox Alignment</title>
+    <style>
+        .flex-container{
+            display:flex; /*rows by default*/
+            background-color: lightgrey;
+            padding: 10px;
+        }
+
+        .item{
+            background-color: steelblue;
+            color: white;
+            padding: 20px;
+            margin: 5px;
+        }
+
+        /* justify-content : controls horizontal alignment */
+        .space-between{
+            justify-content: space-between;
+        }
+        .space-around{
+            justify-content: space-around;
+        }
+        .center{
+            justify-content: center;
+        }
+
+        /* align-items : controls vertial alignment */
+        /* flex-start, flex-end, center, stretch, baseline */
+        .align-center{
+            align-items: center;
+        }
+
+        .flex-end{
+            align-items: flex-end;
+        }
+
+        .last-container > .item:nth-child(even){
+            align-self: flex-start;
+        }
+
+        /* flex-wrap : prevent the items inside the flexbox to overflow */
+        .flex-wrap{
+            flex-wrap:wrap;
+        }
+    </style>
+</head>
+<body>
+    <p>justify-content: space-between</p>
+    <div class="flex-container space-between">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+    <hr/>
+    <p>justify-content: center</p>
+    <div class="flex-container center">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+    <hr/>
+    <p>justify-content: space-around</p>
+    <div class="flex-container space-around">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+    </div>
+    <hr/>
+    <p>align-items: center</p>
+    <div class="flex-container align-center" style="height: 150px">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+    </div>
+    <hr/>
+    <p>justify-content: space-around; align-items:flex-end</p>
+    <div class="flex-container space-around flex-end" style="height: 150px">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+    </div>
+    <hr/>
+    <p>.last-containter > .item:nth-child(even) {
+        align-self: flex-start
+    }
+    </p>
+    <div class="last-container flex-container space-around flex-wrap" style="height: 150px">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+    </div>
+</body>
+</html>
