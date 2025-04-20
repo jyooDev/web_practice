@@ -34,9 +34,10 @@
         .parent{
             background-color:lightgrey;
             width: 300px;
-            height: 1000px;
+            height: 800px;
             left: 20px;
             top: 50px;
+            margin-bottom: 100px;
         }
 
         .absolute-div{
@@ -61,6 +62,22 @@
             padding: 10px;
 
         }
+
+        .box{
+            position:absolute;
+            width: 100px;
+            height: 100px;
+        }
+        .one{
+            background-color: red;
+
+        }
+        .two{
+            top: 20px;
+            left: 20px;
+            z-index: 10001;
+            background-color: blue;
+        }
     </style>
 </head>
 <body>
@@ -72,5 +89,8 @@
     <div class="parent relative">
         <div class="absolute-div">I am absolute</div>
     </div>
+
+    <div class="box one">box1</div>
+    <div class="box two">box2</div>
 </body>
 </html>
