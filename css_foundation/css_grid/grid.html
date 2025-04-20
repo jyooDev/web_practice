@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Grid</title>
+    <style>
+        .grid-container{
+            display: grid;
+            background-color: lightgrey;
+            padding: 10px;
+            grid-template-columns: 100px 100px 100px; /*three columns*/
+            grid-template-rows: 100px 100px; /*two rows*/
+        }
+
+        .col-row-frame{
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+        .item{
+            background-color: steelblue;
+            color: white;
+            padding: 20px;
+            margin: 5px;
+        }
+
+        .col-row-frame > .item:last-child{
+            grid-column: span 2;            
+        }
+
+        .col-row-frame > .item:first-child{
+            grid-row: span 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+    <hr/>
+    <p>Using fr</p>
+    <div class="grid-container col-row-frame">
+        <div class="item">Item 1 (grid-row: span 2)</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4 (grid-column: span 2)</div>
+    </div>
+</body>
+</html>
