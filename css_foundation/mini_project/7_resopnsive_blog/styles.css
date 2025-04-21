@@ -14,30 +14,32 @@ body{
     padding: 0;
     font-family: Ubuntu;
     display: grid;
-    grid-template-columns: 2fr 0.8fr;
-    grid-template-rows: 100px 1fr 50px;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto 1fr auto;
     background-color: --var(background-color);
     grid-template-areas: 
     "header header"
     "main sidebar"
     "footer footer";
 }
-
-header{
-    background-color: var(--primary-color);
-}
 #header{
     position:sticky;
+    top: 0;
+    background-color: var(--primary-color);
+    z-index: 10;
     color: white;
     grid-area: header;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     text-align: center;
+    padding: 10px;
 }
 
 #header > h1{
+    position: relative;
+    left: 10px;
     padding: 0;
     margin: 0;
 }
@@ -51,9 +53,10 @@ header{
     position: relative;
     padding: 0;
     justify-content: space-between;
-    gap: 20px;
+    gap: 30px;
     text-align: center;
-    list-style: none;
+    list-style: none;    
+    font-size: 1.5rem;
 }
 
 #about > img{
@@ -73,11 +76,12 @@ header{
     box-sizing: border-box;
     flex-direction: column;
     width: 50vw;
-    left: 10vw;
+    left: 14.5vw;
     top: 10px;
     background-color: white;
     padding: 20px;
     grid-area:main;
+    border: 1px solid var(--line-grey);
 }
 
 #sidebar{
@@ -85,18 +89,21 @@ header{
     position: relative;
     box-sizing: border-box;
     width: 20vw;
-    right: 10vw;
+    right: 9.5vw;
     top: 10px;
     padding: 20px;
     grid-area: sidebar;
+    border: 1px solid var(--line-grey);
 }
 
 #contact{
     display: flex;
+    justify-content: center;
     position: relative;
+    top: 20px;
     background-color: var(--primary-color);
     color: white;
-    gap: 10px;
+    gap: 30px;
     grid-area: footer;
 }
 
@@ -115,4 +122,37 @@ a {
 }
 #sidebar > ul > li >a{
     color: black;
+}
+
+@media (max-width:768px){
+    body{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto auto;
+        grid-template-areas: 
+        "header"
+        "main"
+        "sidebar"
+        "footer";
+    }
+    #header{
+        flex-direction: column;
+    }
+
+    #main{
+        width: 70vw;
+        left: 0vw;
+        margin: 0 auto;
+    }
+
+    #sidebar{
+        position: relative;
+        width: 70vw;
+        right: 0vw;
+        margin: 0 auto;
+        top: 20px;
+    }
+
+    #header > h1 {
+        display: none;
+    }
 }
