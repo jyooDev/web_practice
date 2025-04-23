@@ -88,6 +88,7 @@ body {
 
 .reset-button {
     margin: auto;
+    color: white;
 }
 .reset-button > button{
     width: 340px;
