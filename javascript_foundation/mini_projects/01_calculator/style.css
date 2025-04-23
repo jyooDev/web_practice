@@ -88,9 +88,9 @@ body {
 
 .reset-button {
     margin: auto;
-    color: white;
 }
 .reset-button > button{
+    color: white;
     width: 340px;
     height: 40px;
     border: none;
