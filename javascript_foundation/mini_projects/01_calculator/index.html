@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Calculator</title>
     <script src="script.js"></script>
-    <link rel="stylesheet" href="stylesheet.css"/>
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
     <div class="calculator-container">
+        <p class="title">just a calculator</p>
         <div class="input-box">
             <input type="text" placeholder="0"/>
         </div>
@@ -29,6 +30,9 @@
             <div class="input-button input-number"><button onclick="dot()">.</button></div>
             <div class="input-button input-operator"><button onclick="operators('=')">=</button></div>
             <div class="input-button input-operator"><button onclick="operators('+')">+</button></div>
+        </div>
+        <div class="reset-button">
+            <button onclick="reset()">RESET</button>
         </div>
     </div>
 </body>

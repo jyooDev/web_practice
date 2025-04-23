@@ -1,25 +1,40 @@
 :root{
     --primary-color: #676767;
     --border-grey: #f4f4f4;
+    --primary-blue: #4b87ef;
+    --primary-orange: #f39958;
 }
 body {
     display: flex;
     position: relative;
     top:20vh;
     justify-content: center;
+    font-family: 'Arial', sans-serif;
 }
 .calculator-container{
+    
     display: grid;
     grid-template-columns: 340px;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto auto auto auto;
     grid-template-areas: 
+    "title"
     "text_input"
-    "button_inputs";
+    "button_inputs"
+    "reset";
     width: fit-content;
     background-color: var(--primary-color);
     padding: 10px;
     gap: 10px;
     border-radius: 10px;
+}
+
+.title{
+    grid-area: title;
+    margin: 10px auto 5px auto;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 20px;
+    color: var(--primary-orange);
 }
 
 .input-box{
@@ -28,7 +43,7 @@ body {
 }
 
 .input-box > input{
-    width: 320px;
+    width: 340px;
     height: 40px;
     border-radius: 5px;
     border: 1px solid var(--border-grey);
@@ -65,8 +80,23 @@ body {
 }
 
 .input-number {
-    background-color: #f4f4f4;
+    background-color: var(--border-grey);
 }
 .input-operator {
-    background-color: #f39958;
+    background-color: var(--primary-orange);
+}
+
+.reset-button {
+    margin: auto;
+}
+.reset-button > button{
+    width: 340px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    box-sizing: border-box;
+    background-color: var(--primary-blue);
+    padding-right: 1rem;
 }
