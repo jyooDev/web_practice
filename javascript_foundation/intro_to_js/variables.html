@@ -1,0 +1,49 @@
+
+<!-- 
+:::Declaring variables:::
+var - old method, avoid using it
+let - for variable that can change
+const - for variables that don't change (final)
+
+:::Data types:::
+strings  
+numbers 
+booleans = true/false
+arrays = []
+objects - { name: "Jinah", age: 30}
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Variables and Datatype</title>
+</head>
+    
+<body>
+    <script>
+        const myName = "Alice";
+        const age = 25;
+        const isStudent = true;
+        const hobbies = ["Reading", "Coding"]
+        const person = { 
+            name: myName, 
+            age: age};
+
+        console.log(person);
+        console.log(person.name);
+        // age = 29; TypeError: Attempted assign to readonly property
+
+        let flexibleAge = 10;
+        flexibleAge = age + flexibleAge;
+        console.log(flexibleAge);
+
+        //var redeclares a variable inside a block will also redeclare the variable outside the block
+        console.log(z); //undefined
+        var z = 3;
+        console.log(z); //3
+
+        
+    </script>
+</body>
+</html>
