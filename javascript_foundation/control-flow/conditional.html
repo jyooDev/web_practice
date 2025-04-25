@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Conditional Statement</title>
+</head>
+<body>
+    <label for="nmae">Enter Tempertaure</label>
+    <input id='input'type='input-number' placeholder="0"/>
+    <div>
+        <input type="text" id="output" disabled/>
+    </div>
+    <script>
+        let temp = document.getElementById('input');
+        let output = document.getElementById('output');
+        temp.addEventListener("keydown", function(event){
+            if(event.key === "Enter"){
+                console.log(event.key);
+                if (temp.value > 25){
+                    output.value = "It is a hot day!";
+                } else if (temp.value > 20){
+                    output.value = "It is a nice day!";
+                } else{
+                    output.value = "It is cold! Take your jacket!";
+                }                
+            }
+        })
+
+        // Multiple conditions
+        let age = 20;
+        let hasDriverLicense = true;
+        if(age >= 20 && hasDriverLicense){
+            console.log("You can drive");
+        }
+
+        //Ternary 
+        const isLoggedIn = false;
+        const msg = isLoggedIn ? "Webcomeback" : "Please log in."
+        console.log(msg);
+    </script>
+</body>
+</html>
