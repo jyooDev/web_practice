@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        console.log("Arrays");
+
+        //Declaring and Manipulating Arrays
+        const fruits = ['apple', 'banana', 'grape'];
+        console.log(fruits);
+        console.log(fruits[0]); //apple
+        console.log(fruits[1]); //banana
+        fruits[1] = 'blueberry';
+        console.log(fruits[1]); //blueberry
+        console.log(fruits.length);
+        console.clear();
+
+        //Array methods
+        //push - adds to end
+        fruits.push('mango');
+        console.log(fruits[3]); //mango
+        //pop - removes from end
+        fruits.pop();
+        console.log(fruits); //[apple, blueberry, grape]
+        //shift - removes from begining
+        fruits.shift();
+        console.log(fruits); //[blueberry, grape]
+        //unshift - adds to beginning
+        fruits.unshift('gratefruit');
+        console.log(fruits); //[gratefruit, blueberry, grape]
+        //splice - add / remove elements (start delete(replace index), end index, replacement item)
+        fruits.splice(1,1, 'peach');
+        console.log(fruits); //[gratefruit, peach grape]
+        fruits.splice(1,2);
+        console.log(fruits); //[gratefruit]
+        fruits.splice(1, 1, 'melon'); 
+        console.log(fruits);//[gratefruit, melon]
+        console.clear();
+
+        // filtering
+        const nums = [1,2,3,4,5];
+        console.log("numbers =", nums);
+        const evenNumbers = nums.filter(num => num % 2 === 0);
+        console.log("even numbers = ", evenNumbers);
+        console.clear();
+        
+        // bijective mapping
+        console.log("numbers =", nums);
+        const doubled = nums.map(num => num * 2);
+        console.log("doubled =", doubled);
+    </script>
+</body>
+</html>
