@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>FUNCTIONS</title>
+</head>
+<body>
+    <script>        
+        // function greet(){
+        //     console.log("LETS GET STARTED");
+        // }
+
+        // greet();
+        // greet();
+
+        // function greetUser(name){
+        //     console.log(`Hello, ${name}!`);
+        // }
+
+        // greetUser('Jinah');
+
+
+        function add(num1, num2){
+            console.log(`${num1} + ${num2} = ${num1 + num2}`)
+        }
+
+        add(10,13.3);
+
+        //ARROR FUNCTIONS (SHORTED SYNTAX)
+        const square = (num) => num ** 2;
+        console.log(square(5)); // Output: 25'
+
+        //ARROW FUNCTION WITH MULTIPLE PARAMETERS 
+        const multiply = (a,b) => {
+            return a * b
+        };
+        //const multiply = (a,b) => a * b; Shorter version
+        console.log(multiply(3,6));
+
+        //Function Scope and Hoisting
+        let globalVar = "I am global";
+        function testScope(){
+            let localVar = "I exists only in this function";
+            console.log(globalVar);
+            console.log(localVar);
+        }
+
+        testScope();
+        console.log(globalVar);
+        // console.log(localVar); // ReferenceError: OUT OF SCOPE!!
+
+        hello();
+
+        //Function declaration is hoited, which means it can be called before 
+        function hello() {
+            console.log("Hello from a function declaration");
+        }
+
+        //Function expression first must be defined before use.
+        // greet();
+        // const greet = function(){
+        //     console.log("Hello from a function expression");
+        // } 
+    </script>
+</body>
+</html>
