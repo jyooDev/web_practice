@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Loops</title>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+</head>
+<body>
+    <script>
+        //For Loop
+        for (let i = 0; i <= 5; i++)
+        {
+            console.log('Iteration: ', i);
+        }
+
+        const colors = ['red', 'grey', 'black', 'beige'];
+        for (let i = 0; i < colors.length; i++)
+        {
+            console.log("i = ", i);
+            // console.log("colors[", i, "]=", colors[i]);
+        }
+
+        //While Loop
+        let count = 0;
+        while (count <= 5)
+        {
+            console.log("count = ", count++);
+        }
+
+        //Example of using while loop
+        let userInput;
+        // while(userInput !== 'yes')
+        // {
+        //     userInput = prompt("Type 'yes' to continue.");
+            
+        // }
+        // console.log("You entered 'yes'");
+
+        //Do... while loop
+        let number = 0;
+        do {
+            console.log("Number: ", number++);
+        } while (number <= 5);
+
+
+        console.clear();
+
+        //forEach Loop
+        colors.forEach(function (color){
+            console.log(color);
+        });
+
+        console.clear();
+
+        // for ... of (Used for arrays and iterable objects)
+
+        for(let color of colors){
+            console.log(color);
+        }
+
+        console.clear();
+
+        // for ... in (used for objects )
+        const p1 = {
+            firstName: "John",
+            lastName : "Doe",
+            age: 25,
+            city: "NY"
+        };
+
+        for (const key in p1){
+            console.log("key = ", key);
+            console.log(`person[${key}]:val = `, p1[key]);
+        }
+    </script>
+</body>
+</html>
