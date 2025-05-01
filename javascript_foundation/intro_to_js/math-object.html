@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Math Object</title>
+</head>
+<body>
+    <script>
+        console.log(Math.PI);
+        console.log(Math.E);
+        //Math.round - round to nearest integer
+        console.log(Math.round(4.3));
+
+        //Math.floor - rounds down to nearest integer
+        console.log(Math.floor(4.7));
+
+        //Math.ceil - rounds up to nearest integer
+        console.log(Math.ceil(4.2));
+
+        //Math.max and Math.min
+        console.log("Mth.max() -----");
+        console.log("Math.max(10,20,5,40,30)", Math.max(10,20,5,40,30));
+        console.log("Mth.min() -----");
+        console.log("Math.min(10,20,5,40,30)", Math.min(10,20,5,40,30));
+
+        const nums = [1,2,3,4,5,6,7,8,40,100,44,30];
+        console.log(nums);
+        console.log(`Math.max(...nums) : ${Math.max(...nums)}`);
+        console.log(`Math.min(...nums) : ${Math.min(...nums)}`);
+        console.clear();
+
+        //Math.abs
+        console.log(`Math.abs(-10)) : ${Math.abs(-10)}`);
+
+        //Math.pow()
+        console.log(`Math.pow(2, 3) : ${Math.pow(2, 3)} `);
+        //shortcut
+        console.log(`2 ** 3 = ${2 ** 3}`);
+
+        //Math.sqrt()
+        console.log(`Math.sqrt(25)  ${Math.sqrt(25)}`);
+        console.log(`Math.sqrt(-10)  ${Math.sqrt(-10)}`);
+        console.clear();
+
+        //ex: check if a number is a perfect square
+        function isPerfectSquare(num){
+            if(Math.sqrt(num) % 1 === 0){
+                console.log(`${num} is a perfect square.`);
+                return true;  
+            } 
+            else {
+                console.log(`${num} is not a perfect square.`);
+                return false;
+            }
+        }
+        
+        isPerfectSquare(16);
+        isPerfectSquare(20);
+        console.clear();
+
+        //Math.random() - generates decimal number between 0 - 1
+        console.log(`Math.random()------ ${Math.random()}`);
+        const randomNum = Math.floor(Math.random() * 10) + 1;
+        console.log(randomNum);
+
+        function getRandomNumber(min, max){
+            return Math.floor(Math.random() * (max - min) + min);
+        }
+
+        console.log(getRandomNumber(5,10));
+        console.log(getRandomNumber(5,10));
+        console.log(getRandomNumber(10,100));
+    </script>
+</body>
+</html>
