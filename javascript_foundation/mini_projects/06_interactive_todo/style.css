@@ -1,0 +1,87 @@
+:root{
+    --container : rgb(212, 255, 0);
+    --green1 : rgb(229, 237, 216);
+    --green3 : rgb(121, 135, 55);
+    --green4 : rgb(41, 49, 4);
+    --orange2 : rgb(204, 102, 0);
+    --orange3 : rgb(89, 52, 15);
+}
+html {
+    height: 100vh;
+    font-family: system-ui, -apple-system;
+}
+
+html,body{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    top: 5vh;
+}
+
+.container{
+    background-color: var(--container);
+    width: 40vw;
+    padding: 10px 20px 20px 20px;
+}
+
+h1{
+    color: var(--green4);
+    text-align: left;
+    margin: 5px 0 20px;
+}
+
+.todoContainer{
+    display: grid;
+}
+.todoContainer > div > p { 
+    margin: 5px;
+}
+.todoContainer > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3px;
+}
+
+.todoContainer > div > button{
+    box-sizing: border-box;
+    height: 20px;
+    width: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--orange2);
+    color: var(--orange3);
+}
+
+.addContainer {
+    display:flex;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-top: 10px;
+    justify-content: space-between;
+    gap: 5px;
+    background-color: var(--green1);
+    border-radius: 10px;
+    border: 2px solid var(--green3);
+
+}
+
+.addContainer > input{
+    background-color: var(--green1);
+    border: none;
+    font-size: 0.7rem;
+}
+
+.addContainer > input:focus{
+    outline: none;
+}
+
+.addContainer > button{
+    background-color: var(--green1);
+    color: var(--green4);
+    font-size: 0.9rem;
+    font-weight: 900;
+    border: none;
+    padding: 0 2px 0 2px;
+}
