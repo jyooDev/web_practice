@@ -2,7 +2,7 @@
 let taskCt = 0;
 function addTask(){
     const task = document.querySelector('.inputBox');
-    if (task.value === ''){
+    if (task.value.trim() === ''){
         alert('Please Enter Task');
     }else{
         taskCt += 1;
@@ -20,13 +20,16 @@ function createTaskDiv(task){
     newDiv.classList.add(`task${taskCt}`);
     const taskRemoveButton = document.createElement('button');
     taskRemoveButton.textContent = '-';
-    taskRemoveButton.addEventListener('click', function(){
-        const todoContainer = document.querySelector('.todoContainer');
-        const removeDiv = document.querySelector(`.task${taskCt}`);
-        todoContainer.removeChild(removeDiv);
-        console.log(`Removed Task '${removeDiv.getElementsByTagName(`p`)[0].textContent}'`);
-    })
+    taskRemoveButton.addEventListener('click', removeTask);
     newDiv.appendChild(newTask);
     newDiv.appendChild(taskRemoveButton);
     return newDiv;
+}
+
+function removeTask()
+{
+    const todoContainer = document.querySelector('.todoContainer');
+    const removeDiv = document.querySelector(`.task${taskCt}`);
+    todoContainer.removeChild(removeDiv);
+    console.log(`Removed Task '${removeDiv.getElementsByTagName(`p`)[0].textContent}'`);
 }

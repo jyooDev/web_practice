@@ -36,6 +36,7 @@ h1{
 }
 .todoContainer > div > p { 
     margin: 5px;
+    font-size: 0.7rem;
 }
 .todoContainer > div{
     display: flex;
