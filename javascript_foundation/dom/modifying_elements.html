@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Modifying Elements</title>
+</head>
+<body>
+    <h1 id="main-heading">Before Modified</h1>
+    <div class="buttonDiv">
+        <button class="coloredHeadingBtn" onclick="modifyColorBtn()">Color Heading</button>
+        <button class="modifyTextHeadingBtn" onclick="modifyTextBtn()">Modify Text</button>
+    </div>
+    <script>
+        const heading = document.getElementById('main-heading');
+        const coloredHeadingBtn = document.querySelector('.coloredHeadingBtn');
+        const modifyTextHeadingBtn = document.querySelector('.modifyTextHeadingBtn');
+        function modifyColorBtn(){
+            const curBtnText = coloredHeadingBtn.textContent;
+            if (curBtnText === 'Color Heading'){
+                coloredHeadingBtn.textContent = 'Reset';
+                heading.innerHTML = '<span style="color: rgb(224, 160, 0)">Colored Heading';            
+                }else{
+                heading.textContent = 'Before Modified';
+                heading.style.color = 'black';
+                coloredHeadingBtn.textContent = 'Color Heading';
+            }
+        };
+
+        function modifyTextBtn(){
+            const prevHeadingText = heading.textContent;
+            const curBtnText = modifyTextHeadingBtn.textContent;
+            if (curBtnText === 'Modify Text'){
+                heading.textContent = 'Text Modified'
+                heading.style.fontFamily = 'Georgia';
+                modifyTextHeadingBtn.textContent = 'Reset';
+            }else{
+                heading.textContent = 'Before Modified'
+                heading.style.fontFamily = 'system-ui';
+                modifyTextHeadingBtn.textContent = 'Modify Text';
+            }
+
+            console.log(prevHeadingText);
+            if (prevHeadingText === 'Colored Heading'){
+                heading.style.color = 'rgb(224, 160, 0)';
+            }
+        }
+
+        //Add/Remove new element
+        const newParagraph = document.createElement('p');
+        newParagraph.textContent = 'this is a new paragraph';
+        document.body.appendChild(newParagraph);
+        const newButton = document.createElement('button');
+        newButton.textContent = 'remove new paragraph';
+        newButton.onclick = function(){
+            document.body.removeChild(newParagraph);
+            document.body.removeChild(newButton);
+        };
+        document.body.appendChild(newButton);
+
+
+        //Add/Remove classes
+        const newHighlightButton = document.createElement('button');
+        newHighlightButton.textContent = 'highlight button';
+        document.body.appendChild(newHighlightButton);
+        newHighlightButton.addEventListener('click', function() {
+            if (heading.classList.contains('highlight')){
+                heading.classList.remove('highlight');
+            }else{
+                heading.classList.add('highlight');
+            }
+        })
+
+        //Modifying attributes
+        const newLinkButton = document.createElement('button');
+        const link = document.createElement('a');
+        link.setAttribute('href', 'https://google.com');
+        link.setAttribute('target', '_blank');
+        link.textContent = 'visit website';
+        link.classList.add('linkStyle');
+        newLinkButton.appendChild(link);
+        document.body.appendChild(newLinkButton);
+    </script>
+    <style>
+        :root{
+            --orange : rgb(224, 138, 0);
+            --purple :rgb(63, 30, 79);
+            --yellow : rgb(240, 240, 133);
+        }
+        html, body{
+            font-family:system-ui;
+        }
+
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        button{
+            width: 120px;
+            height: 60px;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 500;
+            color: white;
+            margin: 5px;
+            background-color: var(--purple);
+        }
+
+        .highlight{
+            background-color: var(--yellow);
+        }
+
+        .linkStyle{
+            color: var(--orange);
+            text-decoration: none;
+        }
+    </style>
+</body>
+</html>

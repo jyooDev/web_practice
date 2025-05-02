@@ -1,0 +1,53 @@
+<!-- QuerySelector
+document.querySelector - gets the first item found from top to bottom
+document.querySelectorAll() - gets all in NodeList format
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>D.O.M</title>
+</head>
+<body>
+    <h1 id="main-heading">Welcome to JavaScript!</h1>
+    <p class="description">This is a paragraph1</p>
+    <p class="description">This is a paragraph2</p>
+    <p class="description">This is a paragraph3</p>
+    <p class="description">This is a paragraph4</p>
+    <p class="description">This is a paragraph5</p>
+    <button onclick="changeText()">Id Button</button>
+    <button onclick="changeClassText()">Class Button</button>
+
+    <script>
+        const firstParagraph = document.querySelector('.description');
+        console.log(firstParagraph.textContent);
+
+        const allParagraphs = document.querySelectorAll('.description');
+        console.log(allParagraphs); //NodeList
+
+
+        //Three different loop styles doing identical tasks;
+        allParagraphs.forEach((para) => console.log(para.textContent));
+        console.clear();
+        allParagraphs.forEach(function(paragraph){
+            console.log(paragraph.textContent);
+        });
+        console.clear();
+        //Since allParagrphs is it an iterable object
+        for(let para of allParagraphs){
+            console.log(para.textContent);
+        }
+        console.clear();
+
+        //Try to use getElementsByClassName. It is not iterable object so we have to use other way to loop over
+        const paragraphs = document.getElementsByClassName('description');
+        for(let i = 0; i < paragraphs.length; i++)
+        {
+            console.log(paragraphs[i].textContent);
+        } 
+        console.clear();
+    </script>
+</body>
+</html>

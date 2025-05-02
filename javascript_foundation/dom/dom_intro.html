@@ -1,0 +1,49 @@
+<!-- DOM
+Document Object Model:
+tree-like structure that represents an HTML document
+Javascript can access and modify the DOM to change web page content dynamically.
+
+
+//getElementsBy -> returns HTMLColllection(it is not an iterable object)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>D.O.M</title>
+</head>
+<body>
+    <h1 id="main-heading">Welcome to JavaScript!</h1>
+    <p class="description">This is a paragraph1</p>
+    <p class="description">This is a paragraph2</p>
+    <p class="description">This is a paragraph3</p>
+    <p class="description">This is a paragraph4</p>
+    <p class="description">This is a paragraph5</p>
+    <button onclick="changeText()">Id Button</button>
+    <button onclick="changeClassText()">Class Button</button>
+
+    <script>
+
+        //Select DOM elements by class name; return as an array 
+        function changeClassText(){
+            const paragraphs = document.getElementsByClassName('description');
+            for(p of paragraphs){
+                console.log(p);
+                p.textContent += 'clicked';
+            }
+        }
+
+        //Select DOM elements by id name; it is supposed to be unique value thus only get a single value
+        function changeText(){
+            const a = document.getElementById('main-heading');
+            a.textContent = 'You clicked Button'
+        }
+
+        //Select DOM elements by tag; returns an array
+        const buttons = document.getElementsByTagName('button');
+        console.log(buttons);
+    </script>
+</body>
+</html>
