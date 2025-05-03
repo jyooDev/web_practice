@@ -1,0 +1,60 @@
+<!-- 
+ Javascript executes code line by line.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Asynchronous Javascript</title>
+</head>
+<body>
+    <script>
+        // let ct = 0;
+        // const interval = setInterval(() => {
+        //     ++ct;
+        //     console.log(`Count ${ct}`);
+
+        //     if (ct === 5){
+        //         clearInterval(interval);
+        //     }
+        // },1000);
+
+
+        //FetchDATE
+        // function fetchData(){
+        //     return new Promise((resolve, reject) => {
+        //         setTimeout(() => {
+        //             let success = Math.random() > 0.5;
+        //             success ? resolve("Fetched Data!") : reject("Error fetching data!");
+        //         }, 2000);
+        //     });
+        // }
+
+        // fetchData()
+        //     .then((data) => console.log(data))
+        //     .catch((error) => console.error(error));
+
+
+
+
+        //ASYNC & AWAIT FOR WRITING CLEANER ASYNCHRONOUS CODE
+
+        async function loadData(){
+            console.log("FETCHING DATA....");
+            try{
+                const response = await new Promise((resolve) => {
+                    setTimeout(() => resolve("Data successfully loaded!"), 3000);
+                })
+                console.log(response);
+            }catch(error){
+                console.error(error);
+            }
+        }
+
+        loadData();
+        console.log("end of script");
+    </script>
+</body>
+</html>

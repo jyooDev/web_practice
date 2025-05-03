@@ -1,0 +1,30 @@
+<!-- 
+ Javascript executes code line by line.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Asynchronous Javascript</title>
+</head>
+<body>
+    <script>
+        //Synchrnous js is that it executes statements line by line, in order.
+        console.log("Start");
+        console.log("Processing...");
+        console.log("End");
+
+
+        //Asynchronous js is
+        //e.g. Some tasks like APIs or timer takes time to complete.
+        console.log("Start");
+        setTimeout(() => {
+            console.log("Hello After 3 seconds!");
+        }, 2000);
+        console.log("End");
+
+    </script>
+</body>
+</html>
