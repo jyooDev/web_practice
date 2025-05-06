@@ -1,0 +1,56 @@
+/*
+style.css for Personal Bio Card (Task-Only Version)
+Use this file to add your styles based on these step-by-step instructions
+*/
+
+:root{
+    --sky-blue: #3f9bf6;
+}
+/* Step 1: Style the body with font, color, margin, and background */
+body{
+    position: relative;
+    top: 3vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+
+    font-family: system-ui;
+    background-color: #f3f2f2;
+}
+/* Step 2: Style the <header> with background color, text alignment, padding, and font color */
+header{
+    background-color:var(--sky-blue);
+    margin: 0;
+    width: 40vw;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+/* Step 3: Style <main> to center content and add spacing */
+main{
+    background-color: white;
+    width: 40vw;
+}
+/* Step 4: Style <img> to appear as a circle and set its size */
+img{
+    border-radius: 50%;
+    border: var(--sky-blue) 3px solid;
+    width: 20vw;
+}
+/* Step 5: Style <figcaption> with smaller font and muted color */
+figcaption{
+    padding-top: 10px;
+    font-size: small;
+    font-weight: 700;
+    color: var(--sky-blue);
+}
+/* Step 6: Style the <footer> with background, text alignment, font size, and color */
+footer{
+    background-color: var(--sky-blue);
+    width: 40vw;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-weight: 700;
+}
